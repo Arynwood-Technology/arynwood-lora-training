@@ -7,6 +7,8 @@ one SDXL-derivative checkpoint (Juggernaut XL) transfers to other SDXL
 derivatives (e.g. DreamShaper XL Turbo) without retraining, and why it
 architecturally cannot transfer to SD1.5.
 
+**Read the write-up:** [arynwood.com/research/sdxl-lora-portability](https://arynwood.com/research/sdxl-lora-portability/)
+
 Full write-up: [docs/methodology.md](docs/methodology.md)
 
 ## Contents
