@@ -33,7 +33,8 @@ from pathlib import Path
 
 from PIL import Image
 
-KOHYA_SS_DIR = Path("/home/lorelei/tools/kohya_ss")
+# Your kohya_ss checkout: ~/tools/kohya_ss unless KOHYA_SS_DIR says otherwise.
+KOHYA_SS_DIR = Path(os.environ.get("KOHYA_SS_DIR", "~/tools/kohya_ss")).expanduser()
 KOHYA_PYTHON = KOHYA_SS_DIR / "venv" / "bin" / "python"
 WD14_SCRIPT = KOHYA_SS_DIR / "sd-scripts" / "finetune" / "tag_images_by_wd14_tagger.py"
 WD14_MODEL_DIR = KOHYA_SS_DIR / "wd14_tagger_model"
