@@ -23,10 +23,10 @@ Training images are not included (personal photo dataset).
 ## Reproducing
 
 This reproduces the pipeline, not the published weights: the personal photo dataset is not public.
-Both scripts set `KOHYA_SS_DIR` to the author's own kohya_ss path near the top of the file.
-Change it in both scripts to your kohya_ss checkout **before running**. The scripts use
-kohya_ss's own virtual environment, so its SDXL training dependencies must be installed there.
-TODO(Lorelei): record the kohya_ss version used for the published run.
+Both scripts look for kohya_ss at `~/tools/kohya_ss`; set `KOHYA_SS_DIR` to use another
+checkout. The scripts use kohya_ss's own virtual environment, so its SDXL training
+dependencies must be installed there. The published run used kohya_ss v25.2.1 (commit
+`4161d1d`, with sd-scripts at `3e6935a`).
 
 From this repository root, substituting your own paths:
 

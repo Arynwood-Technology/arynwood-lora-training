@@ -3,8 +3,9 @@ import os
 import subprocess
 
 # kohya_ss lives outside the repo with its own venv (torch+CUDA+accelerate
-# already installed there), same as sad-talker/whisper below.
-KOHYA_SS_DIR = "/home/lorelei/tools/kohya_ss"
+# already installed there), same as sad-talker/whisper below:
+# ~/tools/kohya_ss unless KOHYA_SS_DIR says otherwise.
+KOHYA_SS_DIR = os.path.expanduser(os.environ.get("KOHYA_SS_DIR", "~/tools/kohya_ss"))
 ACCELERATE = os.path.join(KOHYA_SS_DIR, "venv", "bin", "accelerate")
 TRAIN_SCRIPT = os.path.join(KOHYA_SS_DIR, "sd-scripts", "sdxl_train_network.py")
 
